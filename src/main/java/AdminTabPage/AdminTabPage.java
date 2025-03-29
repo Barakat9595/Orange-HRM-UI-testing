@@ -35,7 +35,7 @@ public class AdminTabPage {
     public static int getUsersCount()
     {
         driver.manage().timeouts().implicitlyWait(6,TimeUnit.SECONDS);
-        String countText = driver.findElement(usersCount).getText(); // Example: "(4) Records Found"
+        String countText = driver.findElement(usersCount).getText(); // number of records found
 
         // Step 1: Split by space → ["(4)", "Records", "Found"]
         String numberPart = countText.split(" ")[0]; // Extract "(4)"

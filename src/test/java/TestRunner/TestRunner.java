@@ -9,12 +9,12 @@ import io.cucumber.testng.CucumberOptions;
         glue = "StepDefinitionFiles",
         plugin = {
                 "pretty", // Pretty console output
-                "html:target/cucumber-reports/cucumber.html", // HTML Report
-                "json:target/cucumber-reports/cucumber.json", // JSON Report
-                "rerun:target/rerun.txt" // Re-run failed scenarios
+                "html:target/cucumber-reports/cucumber.html",
+                "json:target/cucumber-reports/cucumber.json"
+
         },
-        monochrome = true, // Better readability in console
-        dryRun = false // Change to 'true' to check step definition mapping
+        monochrome = true,
+        dryRun = false
 )
 public class TestRunner extends AbstractTestNGCucumberTests{
 

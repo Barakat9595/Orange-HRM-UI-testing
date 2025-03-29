@@ -29,7 +29,7 @@ public class LoginStepDefinitions {
 
     @When("user enters valid credentials")
     public void user_enters_valid_credentials() {
-        // Enter username and password
+
         loginPage.enterUsername("Admin");
         loginPage.enterPassword("admin123");
     }

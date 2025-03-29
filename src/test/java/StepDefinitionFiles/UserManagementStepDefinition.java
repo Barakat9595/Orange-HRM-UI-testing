@@ -35,13 +35,13 @@ public class UserManagementStepDefinition {
         wait = new WebDriverWait(driver, Duration.ofSeconds(5));
         softAssert = new SoftAssert();
 
-        // Login
+
         loginPage = new LoginPage(driver);
         loginPage.enterUsername("Admin");
         loginPage.enterPassword("admin123");
         loginPage.clickLogin();
 
-        // Navigate to Admin tab
+
         homePage = new HomePage(driver);
         homePage.switchToAdminTab();
         adminTabPage = new AdminTabPage(driver); //intialize it just once

@@ -34,23 +34,23 @@ public class AddUserFormPage {
         Actions actions = new Actions(driver);
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(4));
 
-        // Click the field and enter the name
+
         WebElement nameField = wait.until(ExpectedConditions.elementToBeClickable(employeeNameField));
         nameField.click();
         nameField.sendKeys(employeeName);
 
-        // Add a short delay to allow suggestions to populate
+        // Add a short delay to allow suggestions to appear
         try {
-            Thread.sleep(10000);  // Short delay (1 second)
+            Thread.sleep(5000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
 
-        // Wait for the suggestions list to be visible
+
         By suggestionList = By.xpath("//div[contains(@class,'autocomplete')]");
         wait.until(ExpectedConditions.visibilityOfElementLocated(suggestionList));
 
-        // Select the first suggestion
+
         actions.sendKeys(Keys.ARROW_DOWN)
                 .sendKeys(Keys.ENTER)
                 .perform();
@@ -67,11 +67,11 @@ public class AddUserFormPage {
         Actions actions = new Actions(driver);
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(4));
 
-        // Click the dropdown to open it
+
         WebElement dropdown = wait.until(ExpectedConditions.elementToBeClickable(DDL));
         dropdown.click();
 
-        // Press Arrow Down twice and then Enter to select
+
         actions.sendKeys(Keys.ARROW_DOWN)
                 .sendKeys(Keys.ARROW_DOWN)
                 .sendKeys(Keys.ENTER)
@@ -83,11 +83,11 @@ public class AddUserFormPage {
         Actions actions = new Actions(driver);
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(4));
 
-        // Click the dropdown to open it
+
         WebElement dropdown = wait.until(ExpectedConditions.elementToBeClickable(DDL2));
         dropdown.click();
 
-        // Press Arrow Down twice and then Enter to select
+
         actions.sendKeys(Keys.ARROW_DOWN)
                 .sendKeys(Keys.ARROW_DOWN)
                 .sendKeys(Keys.ENTER)
